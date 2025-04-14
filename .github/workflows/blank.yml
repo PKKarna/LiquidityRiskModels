@@ -1,16 +1,24 @@
-/liquidity-risk-engine  
-│── /data                  # Sample datasets  
-│   ├── jpm_10k_2023.csv   # Balance sheet from SEC filings  
-│   └── fr2052a_template.csv  
-│── /scripts  
-│   ├── lcr_nsfr_calculator.py  
-│   ├── stress_testing.py  
-│   └── forecasting.py  
-│── /dashboards  
-│   ├── liquidity_gap_dashboard.py  # Plotly  
-│   └── stress_test_app.R           # Shiny  
-│── /reports  
-│   ├── validation_report.md  
-│   └── assumptions.docx  
+/LiquidityRiskModels  
+
+│── /data                  # Sample and live datasets  
+│   ├── sample/sample.csv           # Mock Bank 10-K data  
+│   └── edgar/             # SEC filings cache  
+│── /src  
+│   ├── core/              # Main logic  
+│   │   ├── calculator.py  # LCR/NSFR/FR2052a  
+│   │   ├── stress_test.py  
+│   │   └── forecaster.py  
+│   ├── parsers/           # SEC data ingestion  
+│   │   ├── edgar_api.py  
+│   │   └── xbrl.py  
+│   └── dashboards/        # Visualization  
+│       ├── plotly/ app.py 
+│       └── shiny/  
+│── /tests                 # Unit/integration tests  
+│   ├── test_calculator.py  
+│   └── test_edgar.py  
+│── .github/workflows      # CI/CD  
+│   └── main.yml  
 │── requirements.txt  
+│── config.ini            # API keys and parameters  
 └── README.md  
