@@ -1,0 +1,16 @@
+/liquidity-risk-engine  
+│── /data                  # Sample datasets  
+│   ├── jpm_10k_2023.csv   # Balance sheet from SEC filings  
+│   └── fr2052a_template.csv  
+│── /scripts  
+│   ├── lcr_nsfr_calculator.py  
+│   ├── stress_testing.py  
+│   └── forecasting.py  
+│── /dashboards  
+│   ├── liquidity_gap_dashboard.py  # Plotly  
+│   └── stress_test_app.R           # Shiny  
+│── /reports  
+│   ├── validation_report.md  
+│   └── assumptions.docx  
+│── requirements.txt  
+└── README.md  
