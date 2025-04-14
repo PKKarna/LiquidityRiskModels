@@ -1,0 +1,4 @@
+﻿"product_type,cash_flows,liabilities,stability_factor"
+"Retail_Deposits,50000,1500000,0.95"
+"Wholesale_Funding,30000,500000,0.50"
+...  
